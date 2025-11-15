@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: brain-tumor-classifier
+    env: python
+    plan: free
+    region: oregon
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run model.py --server.port $PORT --server.address 0.0.0.0"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
