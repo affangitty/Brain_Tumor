@@ -134,7 +134,7 @@ NUM_CLASSES = 4
 # Robust loader (no heavyweight dummy forward)
 # -------------------------
 @st.cache_resource
-def load_model(checkpoint_path=r"C:\Users\affan\Desktop\Brain Tumor\unet_vit_hybrid.pth"):
+def load_model(checkpoint_path=r"./unet_vit_hybrid.pth"):
     # instantiate model with the same hyperparams used during training
     model = UNetViT(
         in_channels=3,
